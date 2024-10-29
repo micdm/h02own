@@ -76,7 +76,7 @@ type H02Data struct {
 var mqtt_client mqtt.Client
 
 var re = `^\*(?P<manufacturer>\w{2}),(?P<id>\d+),V\d,(?P<hours>\d{2})(?P<minutes>\d{2})(?P<seconds>\d{2}),(?P<gps_valid>[AV])?,` +
-	`(?P<latitude>\d{4}\.\d{4}),(?P<latitude_symbol>[NS]),(?P<longitude>\d{5}\.\d{4}),(?P<longitude_symbol>[EW]),(?P<speed>\d+\.?\d*),` +
+	`(?P<latitude>\d{4}\.\d{4}),(?P<latitude_symbol>[NS]),(?P<longitude>\d{4}\.\d{4}),(?P<longitude_symbol>[EW]),(?P<speed>\d+\.?\d*),` +
 	`(?P<direction>\d+\.?\d*),(?P<day>\d{2})(?P<month>\d{2})(?P<year>\d{2}),(?P<status>[0-9A-F]{8}),?.*#`
 var H02LocationMessageRegex = regroup.MustCompile(re)
 
